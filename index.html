@@ -104,7 +104,7 @@
     <script type="text/javascript" src="https://cdn.yimian.xyz/iotcat-homepage/main.js"></script>
     <script src="https://cdn.yimian.xyz/ushio-js/ushio-footer.min.js"></script>
     <script type="text/javascript">
-      $.get("https://api.yimian.xyz/words/", function(res){
+      $.get("https://api.yimian.xyz/words/?lang="+page.tran.getLang(), function(res){
         $('#hitokoto').html(res);
       });
     </script>
