@@ -95,7 +95,7 @@
             <p>&copy; 2018-
               <script>document.write((new Date).getFullYear());</script> iotcat |
               <a style="TEXT-DECORATION:none" href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">
-                <font color="#b3b3b3">鲁ICP备18022823号-1</font></a> | Powered By <a id="ushio-homepage" href="https://ushio.cool"><span class="shaky">Ushio</span></a> </p><p> <a href="https://github.com/iotcat/iotcat.me-homepage">Github</a> | <a href="https://login.yimian.xyz/">Setting</a></p>
+                <font color="#b3b3b3">鲁ICP备18022823号-1</font></a> | Powered By <a id="ushio-homepage" href="#" onClick="page.showUshio('iotcat.me-homepage')"><span class="shaky">Ushio</span></a> </p>
           </footer>
         </div>
       </div>
@@ -104,9 +104,11 @@
     <script type="text/javascript" src="https://cdn.yimian.xyz/iotcat-homepage/main.js"></script>
     <script src="https://cdn.yimian.xyz/ushio-js/ushio-footer.min.js"></script>
     <script type="text/javascript">
+    $(function(){
       $.get("https://api.yimian.xyz/words/?lang="+page.tran.getLang(), function(res){
         $('#hitokoto').html(res);
       });
+    });
     </script>
   </body>
 
