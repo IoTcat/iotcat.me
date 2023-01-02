@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faEnvelope, faKey, faRss } from '@fortawesome/free-solid-svg-icons'
@@ -22,50 +21,14 @@ import Footer from "../components/footer"
 
 import { shaky } from '../styles/shaky.module.css'
 
-export { Head } from "../components/head"
+import { useSiteMetadata } from '../hooks/siteMetadata'
+
+
+export { Head } from "../components/seo"
 
 const Page = () => {
-    const data = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        background {
-                            default,
-                            refresh
-                        },
-                        logo {
-                            src,
-                            title,
-                            alt,
-                            nft,
-                            luckyClickTimes
-                        },
-                        name {
-                            name,
-                            href,
-                            title
-                        },
-                        hitokoto {
-                            value
-                        },
-                        description,
-                        subdescription,
-                        buttons {
-                            name,
-                            href
-                        },
-                        socials {
-                            href,
-                            title,
-                            icon
-                        }
-                    }
-                }
-            }
-        `
-    ).site.siteMetadata
 
+    const data = useSiteMetadata()
     const [backgroundImage, setBackGroundImage] = React.useState(data.background.default)
     const [leftLuckyClickTimes, setLeftLuckyClickTimes] = React.useState(data.logo.luckyClickTimes)
 

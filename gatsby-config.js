@@ -13,6 +13,12 @@ module.exports = {
   siteMetadata: {
     title: 'IoTcat',
     favicon: 'https://cdn.yimian.xyz/iotcat/iotcat.ico',
+    seo: {
+      description: 'Hey, I am IoTcat. A full-stack electrical and computer engineer, passionate about programming and system design..',
+      image: 'https://cdn.yimian.xyz/iotcat/iotcat.png',
+      url: 'https://iotcat.me/',
+      keywords: 'iotcat, IoT, ECE, JSTS, cornell, liverpool, full-stack, engineer, 呓喵酱, 京アニ'
+    },
     background: {
       default: '/img/background.jpg',
       refresh: 'https://api.yimian.xyz/img/?type=wallpaper',
@@ -64,8 +70,8 @@ module.exports = {
         value: '♪（＾∀＾●）ﾉｼ '
       }
     ],
-    description: 'Hey, I am IoTcat. A full stack IoT engineer..',
-    subdescription: 'IoT / ACG / JSTS / Cornell / Liverpool / 京アニ',
+    description: 'Hey, I am IoTcat. A full-stack IoT engineer..',
+    subdescription: 'IoT / ECE / JSTS / Cornell / Liverpool / 京アニ',
     buttons: [
       {
           name: 'Blog',
