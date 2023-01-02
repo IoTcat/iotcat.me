@@ -6,7 +6,7 @@ panel_cover__overlay,
 panel_main,
 panel_main__inner,
 panel_main__content,
-} from '../styles/global.module.css'
+} from '../styles/panel.module.scss'
 
 
 const Panel = ({ children, background, opacity }) => (

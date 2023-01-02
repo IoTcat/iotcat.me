@@ -3,7 +3,7 @@ import * as React from 'react'
 import {
     description,
     description_sub
-} from '../styles/global.module.css'
+} from '../styles/description.module.scss'
 
 
 const Description = ({ children, type }) => (

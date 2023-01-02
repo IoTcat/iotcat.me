@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import {
     hitokoto
-} from '../styles/global.module.css'
+} from '../styles/hitokoto.module.scss'
 
 
 const Hitokoto = ({ children }) => (

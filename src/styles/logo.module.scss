@@ -1,0 +1,38 @@
+
+.logo {
+	width: 25%;
+	border: 3px solid #FFF;
+	border-radius: 50%;
+	box-shadow: 0 0 20px 4px rgba(0,0,0,0.3);
+	margin-bottom: .2em;
+	transition: all .5s;
+}
+
+@media (any-hover: hover) {
+	.logo:hover {
+		border: 3px solid #5ba4e5;
+		transition: all .5s;
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(350deg);
+		transform: rotate(360deg);
+		-ms-transform: rotate(360deg)
+	}
+}
+
+.logo:active {
+	border: 3px solid #5ba4e5;
+	transition: all .5s;
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(350deg);
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg)
+}
+
+
+@media all and (max-width:767px) {
+	.logo {
+		width: 100px;
+	}
+}

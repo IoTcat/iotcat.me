@@ -1,0 +1,16 @@
+@import "global";
+
+footer {
+	@include default;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	color: #b3b3b3;
+	font-size: .7em;
+
+	a {
+		color: #b3b3b3;
+
+	}
+}

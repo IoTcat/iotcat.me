@@ -1,0 +1,15 @@
+@mixin default {
+
+	a {
+		text-decoration: none
+	}
+
+
+	p {
+		margin-bottom: 1.3em;
+		line-height: 1.7em;
+		margin: 0;
+		padding: 0;
+	}
+
+}

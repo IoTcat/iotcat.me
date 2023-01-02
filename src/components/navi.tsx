@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import {
     navi_wrapper
-} from '../styles/global.module.css'
+} from '../styles/navi.module.scss'
 
 
 const Navi = ({ children }) => (

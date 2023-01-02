@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import {
     logo,
-} from '../styles/global.module.css'
+} from '../styles/logo.module.scss'
 
 const Logo = ({ onClick, ...others }) => (
     <a onClick={onClick}>

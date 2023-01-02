@@ -1,0 +1,50 @@
+
+.panel_cover {
+    width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background:  top left no-repeat #666;
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+}
+
+.panel_cover__overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	display: block;
+	background-color: rgba(60,91,147,0.6);
+	background-image: -webkit-linear-gradient(-410deg,rgba(61,66,96,0.6) 20%,rgba(21,23,34,0.8));
+	background-image: linear-gradient(140deg,rgba(61,66,96,0.6) 20%,rgba(21,23,34,0.8));
+}
+
+.panel_main {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 100%	
+}
+
+.panel_main__inner {
+	position: relative;
+	z-index: 11;
+	display: table-cell;
+	padding: 60px 10%;
+	vertical-align: middle;
+	color: #FFF;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	font-weight: 100
+}
+
+.panel_main__content {
+	margin: 0 auto;
+	max-width: 620px
+}

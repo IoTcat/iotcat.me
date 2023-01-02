@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import {
 name
-} from '../styles/global.module.css'
+} from '../styles/name.module.scss'
 
 const Name = ({ children, ...others }) => (
     <>

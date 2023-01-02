@@ -12,14 +12,13 @@ import Hitokoto from "../components/hitokoto"
 import Divider from "../components/divider"
 import Description from "../components/description"
 import Navi from "../components/navi"
-import Navibuttons from "../components/navibuttons"
-import Navisocials from "../components/navisocials"
+import Naviblock from "../components/naviblock"
 import Navitem from "../components/navitem"
 import Footer from "../components/footer"
 
 
 
-import { shaky } from '../styles/shaky.module.css'
+import { shaky } from '../styles/shaky.module.scss'
 
 import { useSiteMetadata } from '../hooks/siteMetadata'
 
@@ -46,19 +45,19 @@ const Page = () => {
             <Description>{data.description}</Description>
             <Description type="sub">{data.subdescription}</Description>
             <Navi>
-                <Navibuttons>
+                <Naviblock type="button">
                     {data.buttons.map((button, index)=><Navitem key={index} href={button.href}>{button.name}</Navitem>)}            
-                </Navibuttons>
-                <Navisocials>
+                </Naviblock>
+                <Naviblock type="social">
                     {data.socials.map((social, index)=>(
                         <Navitem key={index} href={social.href} title={social.title} target="_blank" >
                             <FontAwesomeIcon icon={[faRss, faComment, faEnvelope, faKey, faGithub, faTelegram].find(fa=>fa.iconName === social.icon)} />
                         </Navitem>
                     ))}
-                </Navisocials>
+                </Naviblock>
             </Navi>
             <Footer>
-                <p>&copy; 2018-{new Date().getFullYear()} IoTcat | Powered By <a href="https://github.com/gatsbyjs/gatsby"><span>Gatsby</span></a> & <a href="https://ushio.yimian.xyz/" className={shaky}>Ushio</a></p>
+                <p><a target="_blank" title="Click to see Source Code!" href="https://github.com/IoTcat/iotcat.me">&copy; 2018-{new Date().getFullYear()} IoTcat</a> | Powered By <a target="_blank" href="https://github.com/gatsbyjs/gatsby"><span>Gatsby</span></a> & <a href="https://ushio.yimian.xyz/" className={shaky}>Ushio</a></p>
             </Footer>
         </Panel>
     )

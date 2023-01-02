@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import {
     divider,
-} from '../styles/global.module.css'
+} from '../styles/divider.module.scss'
 
 
 const Divider = () => (

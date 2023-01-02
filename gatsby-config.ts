@@ -33,7 +33,7 @@ module.exports = {
     name: {
       name: 'IoTcat',
       href: '#',
-      title: 'hahahahahah'
+      title: 'ETH: 0x24e9b47D4d823956CcCcd55eda1471a47De215e4'
     },
     hitokoto: [
       {
@@ -123,6 +123,7 @@ module.exports = {
         icon: `static/img/iotcat.png`
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sass`
   ],
 }
