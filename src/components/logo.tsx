@@ -4,7 +4,7 @@ import {
     logo,
 } from '../styles/global.module.css'
 
-const Logo = ({ onClick, animate, ...others }) => (
+const Logo = ({ onClick, ...others }) => (
     <a onClick={onClick}>
         <img className={logo} {...others} />
     </a>
