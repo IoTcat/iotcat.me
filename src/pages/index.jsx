@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as fas from '@fortawesome/free-solid-svg-icons'
-import * as fab from '@fortawesome/free-brands-svg-icons'
+import { faComment, faEnvelope, faKey, faRss } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons'
 
 
 import Panel from "../components/panel"
@@ -74,7 +74,6 @@ const Page = () => {
         setBackGroundImage(data.background.refresh + '&t=' + new Date().valueOf())
         setLeftLuckyClickTimes(leftLuckyClickTimes-1)
     }
-
     return (
         <Panel background={backgroundImage} opacity={(leftLuckyClickTimes / data.logo.luckyClickTimes)} >
             <Logo src={data.logo.src} title={data.logo.title} onClick={logoOnclick} alt={data.logo.alt} />
@@ -90,7 +89,7 @@ const Page = () => {
                 <Navisocials>
                     {data.socials.map((social, index)=>(
                         <Navitem key={index} href={social.href} title={social.title} target="_blank" >
-                            <FontAwesomeIcon icon={[fas, fab].find(fa=>fa.hasOwnProperty(social.icon))[social.icon]} />
+                            <FontAwesomeIcon icon={[faRss, faComment, faEnvelope, faKey, faGithub, faTelegram].find(fa=>fa.iconName === social.icon)} />
                         </Navitem>
                     ))}
                 </Navisocials>

@@ -80,27 +80,27 @@ module.exports = {
       {
         href: 'https://keys.openpgp.org/vks/v1/by-fingerprint/C0D87F01EE765A2287531F2FDBD73FCA75D4768B',
         title: 'PGP Public Key',
-        icon: 'faKey'
+        icon: 'key'
       },
       {
         href: 'https://t.me/iotcat',
         title: 'Telegram',
-        icon: 'faTelegram'
+        icon: 'telegram'
       },
       {
         href: 'https://github.com/IoTcat',
         title: 'Github',
-        icon: 'faGithub'
+        icon: 'github'
       },
       {
         href: 'https://www.eee.dog/atom.xml',
         title: 'RSS',
-        icon: 'faRss'
+        icon: 'rss'
       },
       {
         href: 'mailto:i@iotcat.me',
         title: 'Email: i@iotcat.me',
-        icon: 'faEnvelope'
+        icon: 'envelope'
       },
     ]
   },
