@@ -1,5 +1,5 @@
 {
-  "name": "iotcat.me-homepage",
+  "name": "iotcat.me",
   "private": true,
   "description": "Homepage for IoTcat.me",
   "version": "0.1.0",
@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iotcat/iotcat.me-homepage"
+    "url": "https://github.com/iotcat/iotcat.me"
   },
   "bugs": {
-    "url": "https://github.com/iotcat/iotcat.me-homepage/issues"
+    "url": "https://github.com/iotcat/iotcat.me/issues"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
