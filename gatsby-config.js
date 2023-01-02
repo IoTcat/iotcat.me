@@ -110,5 +110,19 @@ module.exports = {
       },
     ]
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `IoTcat`,
+        short_name: `IoTcat`,
+        start_url: `/`,
+        background_color: `#3b4154`,
+        theme_color: `#3b4154`,
+        display: `standalone`,
+        icon: `static/img/iotcat.png`
+      },
+    },
+    `gatsby-plugin-offline`
+  ],
 }
