@@ -1,5 +1,4 @@
 import React from "react"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import Panel from "../components/panel"
 import Logo from '../components/logo'
@@ -31,10 +30,9 @@ const Page = () => {
     const logoOnclick = ()=>{
         setBackGroundImage(data.background.refresh + '&t=' + new Date().valueOf())
         setLeftLuckyClickTimes(leftLuckyClickTimes-1)
-        typeof window !== "undefined" && window.gtag("event", "click", {
-            event_category: 'logo',
-            event_label: 'logo click times',
-            value: data.logo.luckyClickTimes - leftLuckyClickTimes
+        typeof window !== "undefined" && window.dataLayer.push({
+            event: 'logo-click',
+            logoClickedTimes: data.logo.luckyClickTimes - leftLuckyClickTimes + 1
         })
     }
     return (
@@ -58,7 +56,7 @@ const Page = () => {
                 </Naviblock>
             </Navi>
             <Footer>
-                <p><OutboundLink target="_blank" title="Click to see Source Code!" href="https://github.com/IoTcat/iotcat.me">&copy; 2018-{new Date().getFullYear()} IoTcat</OutboundLink> | Powered By <OutboundLink target="_blank" href="https://github.com/gatsbyjs/gatsby">Gatsby</OutboundLink> & <OutboundLink href="https://ushio.yimian.xyz/" className={shaky}>Ushio</OutboundLink></p>
+                <p><a target="_blank" title="Click to see Source Code!" href="https://github.com/IoTcat/iotcat.me">&copy; 2018-{new Date().getFullYear()} IoTcat</a> | Powered By <a target="_blank" href="https://github.com/gatsbyjs/gatsby">Gatsby</a> & <a href="https://ushio.yimian.xyz/" className={shaky}>Ushio</a></p>
             </Footer>
         </Panel>
     )

@@ -7,7 +7,7 @@ name
 const Name = ({ children, ...others }) => (
     <>
         <h1 className={name}>
-            <a {...others}>
+            <a id="name" {...others}>
                 <span>{children}</span>
             </a>
         </h1>

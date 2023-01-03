@@ -5,7 +5,7 @@ import {
 } from '../styles/logo.module.scss'
 
 const Logo = ({ onClick, ...others }) => (
-    <a onClick={onClick}>
+    <a id="logo" onClick={onClick}>
         <img className={logo} {...others} />
     </a>
 )
