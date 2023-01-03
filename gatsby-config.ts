@@ -12,10 +12,9 @@
 module.exports = {
   siteMetadata: {
     title: 'IoTcat',
-    favicon: 'https://cdn.yimian.xyz/iotcat/iotcat.ico',
     seo: {
       description: 'Hey, I am IoTcat. A full-stack electrical and computer engineer, passionate about programming and system design..',
-      image: 'https://cdn.yimian.xyz/iotcat/iotcat.png',
+      image: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
       url: 'https://iotcat.me/',
       keywords: 'iotcat, IoT, ECE, JSTS, cornell, liverpool, full-stack, engineer, 呓喵酱, 京アニ'
     },
@@ -117,22 +116,11 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-169276192-3",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**"],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-        // Defers execution of google analytics script after page load
-        defer: false,
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        // defaults to false
-        enableWebVitalsTracking: true,
+        respectDNT: false
       },
     },
     {

@@ -17,7 +17,7 @@ import { faComment, faEnvelope, faKey, faRss } from '@fortawesome/free-solid-svg
 import { faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons'
 import { shaky } from '../styles/shaky.module.scss'
 
-import { useSiteMetadata } from '../hooks/siteMetadata'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 export { Head } from "../components/seo"
 

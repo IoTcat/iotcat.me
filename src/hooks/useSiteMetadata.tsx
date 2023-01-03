@@ -6,7 +6,6 @@ export const useSiteMetadata = () => (useStaticQuery(
                 site {
                     siteMetadata {
                         title,
-                        favicon,
                         seo {
                             description,
                             image,
