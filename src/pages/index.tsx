@@ -1,5 +1,5 @@
 import React from "react"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import Panel from "../components/panel"
 import Logo from '../components/logo'
@@ -31,6 +31,11 @@ const Page = () => {
     const logoOnclick = ()=>{
         setBackGroundImage(data.background.refresh + '&t=' + new Date().valueOf())
         setLeftLuckyClickTimes(leftLuckyClickTimes-1)
+        typeof window !== "undefined" && window.gtag("event", "click", {
+            event_category: 'logo',
+            event_label: 'logo click times',
+            value: data.logo.luckyClickTimes - leftLuckyClickTimes
+        })
     }
     return (
         <Panel background={backgroundImage} opacity={(leftLuckyClickTimes / data.logo.luckyClickTimes)} >
