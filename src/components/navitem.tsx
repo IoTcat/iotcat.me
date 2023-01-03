@@ -1,11 +1,11 @@
 import * as React from 'react'
-
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Navitem = ({ children, ...others }) => (
     <li>
-        <a {...others}>
+        <OutboundLink {...others}>
             {children}
-        </a>
+        </OutboundLink>
     </li>
 )
 

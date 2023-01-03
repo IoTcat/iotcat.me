@@ -1,9 +1,5 @@
 import React from "react"
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComment, faEnvelope, faKey, faRss } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons'
-
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Panel from "../components/panel"
 import Logo from '../components/logo'
@@ -16,12 +12,12 @@ import Naviblock from "../components/naviblock"
 import Navitem from "../components/navitem"
 import Footer from "../components/footer"
 
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faComment, faEnvelope, faKey, faRss } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons'
 import { shaky } from '../styles/shaky.module.scss'
 
 import { useSiteMetadata } from '../hooks/siteMetadata'
-
 
 export { Head } from "../components/seo"
 
@@ -57,7 +53,7 @@ const Page = () => {
                 </Naviblock>
             </Navi>
             <Footer>
-                <p><a target="_blank" title="Click to see Source Code!" href="https://github.com/IoTcat/iotcat.me">&copy; 2018-{new Date().getFullYear()} IoTcat</a> | Powered By <a target="_blank" href="https://github.com/gatsbyjs/gatsby"><span>Gatsby</span></a> & <a href="https://ushio.yimian.xyz/" className={shaky}>Ushio</a></p>
+                <p><OutboundLink target="_blank" title="Click to see Source Code!" href="https://github.com/IoTcat/iotcat.me">&copy; 2018-{new Date().getFullYear()} IoTcat</OutboundLink> | Powered By <OutboundLink target="_blank" href="https://github.com/gatsbyjs/gatsby">Gatsby</OutboundLink> & <OutboundLink href="https://ushio.yimian.xyz/" className={shaky}>Ushio</OutboundLink></p>
             </Footer>
         </Panel>
     )
