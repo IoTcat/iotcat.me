@@ -12,6 +12,7 @@
 module.exports = {
   siteMetadata: {
     title: 'IoTcat',
+    demoDelay: 15000,
     seo: {
       description: 'Hey, I am IoTcat. A full-stack electrical and computer engineer, passionate about programming and system design..',
       image: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
@@ -31,7 +32,6 @@ module.exports = {
     },
     name: {
       name: 'IoTcat',
-      href: '#',
       title: 'ETH: 0x24e9b47D4d823956CcCcd55eda1471a47De215e4'
     },
     hitokoto: [

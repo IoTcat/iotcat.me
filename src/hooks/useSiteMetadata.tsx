@@ -6,6 +6,7 @@ export const useSiteMetadata = () => (useStaticQuery(
                 site {
                     siteMetadata {
                         title,
+                        demoDelay,
                         seo {
                             description,
                             image,
@@ -25,7 +26,6 @@ export const useSiteMetadata = () => (useStaticQuery(
                         },
                         name {
                             name,
-                            href,
                             title
                         },
                         hitokoto {

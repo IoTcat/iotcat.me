@@ -25,21 +25,37 @@ const Page = () => {
     const data = useSiteMetadata()
     const [backgroundImage, setBackGroundImage] = React.useState(data.background.default)
     const [logoClickedTimes, setLogoClickedTimes] = React.useState(0)
+    const [hitokoto, setHitokoto] = React.useState(data.hitokoto[Math.floor(Math.random()*data.hitokoto.length)].value)
 
-
-    const logoOnclick = ()=>{
+    const logoOnclick = ({ autoClick = false })=>{
         setBackGroundImage(data.background.refresh + '&t=' + new Date().valueOf())
         setLogoClickedTimes(logoClickedTimes+1)
-        typeof window !== "undefined" && window.hasOwnProperty('dataLayer') && window.dataLayer.push({
-            event: 'logo-click',
-            logoClickedTimes: logoClickedTimes + 1
-        })
+            console.log(autoClick)
+        if(!autoClick){
+            typeof window !== "undefined" && window.hasOwnProperty('dataLayer') && window.dataLayer.push({
+                event: 'logo-click',
+                logoClickedTimes: logoClickedTimes + 1
+            })
+            setHitokoto(data.hitokoto[Math.floor(Math.random()*data.hitokoto.length)].value)
+        }else{
+            setHitokoto('👆 Click Me!!')
+        }
     }
+
+    React.useEffect(()=>{
+
+        let timer = null;
+        if(!logoClickedTimes) timer = setTimeout(()=>{
+            logoOnclick({ autoClick: true })
+        }, data.demoDelay);
+        return ()=>clearTimeout(timer)
+    }, [logoClickedTimes])
+
     return (
         <Panel background={backgroundImage} opacity={((data.logo.luckyClickTimes - logoClickedTimes) / data.logo.luckyClickTimes)} >
             <Logo src={data.logo.src} title={data.logo.title} onClick={logoOnclick} alt={data.logo.alt} rotateCoefficient={logoClickedTimes} />
-            <Name href={data.name.href} title={data.name.title}>{data.name.name}</Name>
-            <Hitokoto>{data.hitokoto[Math.floor(Math.random()*data.hitokoto.length)].value}</Hitokoto>
+            <Name title={data.name.title} onClick={logoOnclick}>{data.name.name}</Name>
+            <Hitokoto>{hitokoto}</Hitokoto>
             <Divider/>
             <Description>{data.description}</Description>
             <Description type="sub">{data.subdescription}</Description>
