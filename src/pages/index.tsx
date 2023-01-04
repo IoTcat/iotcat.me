@@ -24,20 +24,20 @@ const Page = () => {
 
     const data = useSiteMetadata()
     const [backgroundImage, setBackGroundImage] = React.useState(data.background.default)
-    const [leftLuckyClickTimes, setLeftLuckyClickTimes] = React.useState(data.logo.luckyClickTimes)
+    const [logoClickedTimes, setLogoClickedTimes] = React.useState(0)
 
 
     const logoOnclick = ()=>{
         setBackGroundImage(data.background.refresh + '&t=' + new Date().valueOf())
-        setLeftLuckyClickTimes(leftLuckyClickTimes-1)
-        typeof window !== "undefined" && window.dataLayer.push({
+        setLogoClickedTimes(logoClickedTimes+1)
+        typeof window !== "undefined" && window.hasOwnProperty('dataLayer') && window.dataLayer.push({
             event: 'logo-click',
-            logoClickedTimes: data.logo.luckyClickTimes - leftLuckyClickTimes + 1
+            logoClickedTimes: logoClickedTimes + 1
         })
     }
     return (
-        <Panel background={backgroundImage} opacity={(leftLuckyClickTimes / data.logo.luckyClickTimes)} >
-            <Logo src={data.logo.src} title={data.logo.title} onClick={logoOnclick} alt={data.logo.alt} />
+        <Panel background={backgroundImage} opacity={((data.logo.luckyClickTimes - logoClickedTimes) / data.logo.luckyClickTimes)} >
+            <Logo src={data.logo.src} title={data.logo.title} onClick={logoOnclick} alt={data.logo.alt} rotateCoefficient={logoClickedTimes} />
             <Name href={data.name.href} title={data.name.title}>{data.name.name}</Name>
             <Hitokoto>{data.hitokoto[Math.floor(Math.random()*data.hitokoto.length)].value}</Hitokoto>
             <Divider/>

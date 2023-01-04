@@ -4,9 +4,9 @@ import {
     logo,
 } from '../styles/logo.module.scss'
 
-const Logo = ({ onClick, ...others }) => (
-    <a id="logo" onClick={onClick}>
-        <img className={logo} {...others} />
+const Logo = ({ onClick, rotateCoefficient, ...others }) => (
+    <a id="logo" className={logo} onClick={onClick}>
+        <img style={{ transform: `rotate(${rotateCoefficient*360}deg)` }} {...others} />
     </a>
 )
 export default Logo

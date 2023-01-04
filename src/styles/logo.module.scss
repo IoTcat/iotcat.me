@@ -1,5 +1,5 @@
 
-.logo {
+.logo img{
 	width: 25%;
 	border: 3px solid #FFF;
 	border-radius: 50%;
@@ -8,31 +8,16 @@
 	transition: all .5s;
 }
 
-@media (any-hover: hover) {
-	.logo:hover {
-		border: 3px solid #5ba4e5;
-		transition: all .5s;
-		-webkit-transform: rotate(360deg);
-		-moz-transform: rotate(360deg);
-		-o-transform: rotate(350deg);
-		transform: rotate(360deg);
-		-ms-transform: rotate(360deg)
-	}
-}
 
-.logo:active {
-	border: 3px solid #5ba4e5;
-	transition: all .5s;
-	-webkit-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-o-transform: rotate(350deg);
-	transform: rotate(360deg);
-	-ms-transform: rotate(360deg)
+@media (any-hover: hover) {
+	.logo:hover img {
+		border: 3px solid #5ba4e5;
+	}
 }
 
 
 @media all and (max-width:767px) {
-	.logo {
+	.logo img{
 		width: 100px;
 	}
 }
