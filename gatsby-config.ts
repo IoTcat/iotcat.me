@@ -12,7 +12,7 @@
 module.exports = {
   siteMetadata: {
     title: 'IoTcat',
-    demoDelay: 15000,
+    demoDelay: 12000,
     seo: {
       description: 'Hey, I am IoTcat. A full-stack electrical and computer engineer, passionate about programming and system design..',
       image: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
