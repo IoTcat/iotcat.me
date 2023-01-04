@@ -83,7 +83,7 @@ module.exports = {
     ],
     socials: [
       {
-        href: 'https://keys.openpgp.org/vks/v1/by-fingerprint/C0D87F01EE765A2287531F2FDBD73FCA75D4768B',
+        href: 'https://raw.githubusercontent.com/IoTcat/IoTcat/main/C0D87F01EE765A2287531F2FDBD73FCA75D4768B.asc',
         title: 'PGP Public Key',
         icon: 'key'
       },
