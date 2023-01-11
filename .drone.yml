@@ -1,0 +1,19 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+  - name: build
+    image: node:18
+    commands:
+      - npm install
+      - npm run build
+
+  - name: publish  
+    image: plugins/gh-pages
+    settings:
+      pages_directory: public/
+      username:
+        from_secret: github_username
+      password:
+        from_secret: github_password
