@@ -6,8 +6,8 @@ steps:
   - name: build
     image: node:18
     commands:
-      - npm install
-      - npm run build
+      - yarn install
+      - yarn run build
 
   - name: publish  
     image: plugins/gh-pages
