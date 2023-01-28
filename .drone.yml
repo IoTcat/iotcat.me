@@ -17,3 +17,7 @@ steps:
         from_secret: github_username
       password:
         from_secret: github_password
+
+trigger:
+  branch:
+  - master
