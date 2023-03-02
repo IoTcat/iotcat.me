@@ -14,10 +14,10 @@ module.exports = {
     title: 'IoTcat',
     demoDelay: 12000,
     seo: {
-      description: 'Hey, I am IoTcat. A full-stack electrical and computer engineer, passionate about programming and system design..',
+      description: "Hello, I'm IoTcat, a highly skilled Electrical and Computer Engineer with expertise in full-stack development, programming, and system design. My passion lies in the areas of Internet of Things (IoT), machine learning, and distributed computing.",
       image: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
       url: 'https://iotcat.me/',
-      keywords: 'iotcat, IoT, ECE, JSTS, cornell, liverpool, full-stack, engineer, 呓喵酱, 京アニ'
+      keywords: 'iotcat, IoT, ECE, ML, Machine Learning, Distributed, cornell, full-stack, engineer, 呓喵酱, 京アニ'
     },
     background: {
       default: '/img/background.jpg',
@@ -70,7 +70,7 @@ module.exports = {
       }
     ],
     description: 'Hey, I am IoTcat. A full-stack IoT engineer..',
-    subdescription: 'IoT / ECE / JSTS / Cornell / Liverpool / 京アニ',
+    subdescription: 'IoT / ML / Distributed / ECE / Cornell / 京アニ',
     buttons: [
       {
           name: 'Blog',
