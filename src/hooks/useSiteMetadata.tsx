@@ -10,6 +10,7 @@ export const useSiteMetadata = () => (useStaticQuery(
                         seo {
                             description,
                             image,
+                            image_og,
                             url,
                             keywords
                         },

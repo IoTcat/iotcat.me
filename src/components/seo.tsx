@@ -12,7 +12,7 @@ export const Head = () => {
     <meta name="description" content={data.seo.description} />
     <meta name="keywords" content={data.seo.keywords} />
     <meta name="author" content="IoTcat" />
-    <meta name="image" content={data.logo.src} />
+    <meta name="image" content={data.seo.image} />
     <meta property="og:title" content={data.title} />
     <meta property="og:type" content={"website"} />
     <meta property="og:url" content={data.seo.url} />
@@ -24,7 +24,7 @@ export const Head = () => {
     <meta property="twitter:url" content={data.seo.url} />
     <meta name="twitter:title" content={data.title} />
     <meta name="twitter:description" content={data.description} />
-    <meta name="twitter:image" content={data.seo.image} />
+    <meta name="twitter:image" content={data.seo.image_og} />
 
   </>
 )}

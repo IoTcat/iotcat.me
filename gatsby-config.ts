@@ -15,7 +15,8 @@ module.exports = {
     demoDelay: 12000,
     seo: {
       description: "Hi, I'm an Electrical and Computer Engineer skilled in full-stack dev, programming and system design, passionate about IoT, ML & distributed systems.",
-      image: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
+      image: 'https://cdn.yimian.xyz/iotcat/iotcat.png',
+      image_og: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
       url: 'https://iotcat.me/',
       keywords: 'iotcat, IoT, ECE, ML, Machine Learning, Distributed, cornell, full-stack, engineer, 呓喵酱, 京アニ'
     },
