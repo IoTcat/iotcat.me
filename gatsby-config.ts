@@ -79,7 +79,7 @@ module.exports = {
       },
       {
           name: 'About',
-          href: 'https://yimian.xyz/'
+          href: 'https://github.com/IoTcat'
       }
     ],
     socials: [
