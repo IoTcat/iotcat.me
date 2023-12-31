@@ -2,7 +2,7 @@
 #
 # To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
 #
-name: Deploy Gatsby site to Pages
+name: build
 
 on:
   # Runs on pushes targeting the default branch
@@ -79,10 +79,15 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
-      - name: Upload artifact
+      - name: Upload page artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: public
+          path: './public'
 
   # Deployment job
   deploy:
@@ -95,3 +100,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
+  commit:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: public
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: public
+      - name: List contents of directory
+        run: ls -l
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "ref to ${{ github.sha }}"
