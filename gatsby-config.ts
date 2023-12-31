@@ -18,7 +18,7 @@ module.exports = {
       image: 'https://cdn.yimian.xyz/iotcat/iotcat.png',
       image_og: 'https://cdn.yimian.xyz/iotcat/iotcat_og.png',
       url: 'https://iotcat.me/',
-      keywords: 'iotcat, IoT, ECE, ML, Machine Learning, Distributed, cornell, full-stack, engineer, 呓喵酱, 京アニ'
+      keywords: 'iotcat, IoT, ECE, ML, Machine Learning, Distributed, cornell, full-stack, engineer'
     },
     background: {
       default: '/img/background.jpg',
