@@ -84,7 +84,7 @@ module.exports = {
     ],
     socials: [
       {
-        href: 'https://raw.githubusercontent.com/IoTcat/iotcat.me/gh-pages/iotcat.asc',
+        href: '/iotcat.asc',
         title: 'PGP Public Key',
         icon: 'key'
       },
